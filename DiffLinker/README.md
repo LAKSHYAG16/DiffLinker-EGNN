@@ -69,10 +69,10 @@ DiffLinker_Project/
 ```
 
 📊 Dataset
-Dataset: ZINC Dataset
-Not included due to size constraints
+- Dataset: ZINC molecular dataset  
+- Not included due to GitHub size limitations  
 
-🔽 Download:
+Download:
 https://zenodo.org/record/7121271
 
 📁 Place inside:
@@ -106,7 +106,7 @@ https://www.nature.com/articles/s42256-024-00815-9
 
 👨‍💻 Author
 
-Lakshya Garg
+**Lakshya Garg**  
 GitHub: https://github.com/LAKSHYAG16
 
 
