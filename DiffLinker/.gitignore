@@ -1,0 +1,26 @@
+datasets
+models
+trajectories
+logs
+formatted
+.DS_Store
+._.DS_Store
+.idea
+__pycache__
+
+
+# Ignore dataset files
+*.pt
+
+# Ignore heavy folders (recommended)
+data/
+logs/
+models/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
