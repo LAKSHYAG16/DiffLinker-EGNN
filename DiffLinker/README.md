@@ -1,30 +1,128 @@
-# DiffLinker-EGNN: Molecular Linker Generation using Diffusion Models
+# 🔬 DiffLinker-EGNN: Molecular Linker Generation using Diffusion Models
 
-This project is a simplified implementation and exploration of **DiffLinker**, an Equivariant 3D diffusion-based model for molecular linker design.
+A deep learning project exploring **diffusion-based molecular generation** using **Equivariant Graph Neural Networks (EGNN)** for designing molecular linkers in 3D space.
 
-## 🧠 Overview
+---
 
-Molecular linker generation is an important task in drug discovery.  
-Given two or more molecular fragments, the goal is to generate a valid molecule by connecting them using a chemically feasible linker.
+## 🔥 Highlights
 
-This project uses:
-- **Diffusion Models** → for generative modeling
-- **EGNN (Equivariant Graph Neural Networks)** → to preserve 3D geometric structure
+- Implemented **Diffusion Models** for molecule generation  
+- Used **EGNN (Equivariant GNN)** to preserve 3D geometric structure  
+- Worked with real-world **ZINC dataset**  
+- Generated valid molecular linkers from disconnected fragments  
+- Applied concepts from **AI + Chemistry + Graph ML**
+
+---
+
+## 🧠 Problem Statement
+
+In drug discovery, molecules are often built by connecting smaller fragments.  
+
+> **Goal:** Generate a valid molecular linker between given molecular fragments in 3D space.
 
 ---
 
 ## ⚙️ Methodology
 
-The pipeline followed in this project:
+1. **Fragment Extraction**
+   - Split molecules into fragments (anchors)
 
-1. Fragment decomposition from molecules (ZINC dataset)
-2. Conversion into graph-based molecular representation
-3. Diffusion process:
-   - Forward: Add noise to molecular graph
-   - Reverse: Learn to denoise and generate linker
-4. EGNN used for message passing and structure preservation
-5. Final molecule reconstruction and evaluation
+2. **Graph Representation**
+   - Atoms → nodes  
+   - Bonds → edges  
+   - Coordinates → 3D features  
+
+3. **Diffusion Process**
+   - Forward: Add noise  
+   - Reverse: Denoise to generate structure  
+
+4. **EGNN Model**
+   - Preserves 3D invariance  
+   - Performs message passing  
+
+5. **Molecule Reconstruction**
+   - Generates final molecule with linker  
+
+---
+
+## 🖼️ Architecture
+
+![Pipeline](resources/overview.png)
 
 ---
 
 ## 🏗️ Project Structure
+
+```bash
+DiffLinker_Project/
+├── DiffLinker/
+│   ├── configs/
+│   ├── data/
+│   ├── models/
+│   ├── logs/
+│   ├── resources/
+│   ├── src/
+│   ├── generate.py
+│   ├── compute_metrics.py
+│   └── environment.yml
+└── README.md
+
+📊 Dataset
+Dataset: ZINC Dataset
+Not included due to size constraints
+
+🔽 Download:
+https://zenodo.org/record/7121271
+
+📁 Place inside:
+
+DiffLinker/data/zinc/
+🧪 Installation
+git clone https://github.com/LAKSHYAG16/DiffLinker-EGNN.git
+cd DiffLinker-EGNN
+
+conda env create -f environment.yml
+conda activate difflinker
+🚀 Usage
+python generate.py \
+  --fragments <path_to_fragments> \
+  --model <model_checkpoint> \
+  --linker_size <size_model>
+📈 Results
+Generated valid molecular linkers
+Maintained 3D structural consistency
+Demonstrated diffusion-based molecule generation
+⚠️ Limitations
+High computational cost
+Large dataset dependency
+Training is resource-intensive
+🙌 Acknowledgement
+
+Inspired by:
+
+DiffLinker: Equivariant 3D-conditional Diffusion Model
+https://www.nature.com/articles/s42256-024-00815-9
+
+👨‍💻 Author
+
+Lakshya Garg
+GitHub: https://github.com/LAKSHYAG16
+
+
+---
+
+# 🔥 Why this version is better
+- Clean formatting (GitHub-friendly)
+- Proper code blocks
+- Balanced content (not too long, not shallow)
+- Looks **professional for recruiters**
+
+---
+
+# ⚡ Final Step
+
+Run:
+```bash
+git add README.md
+git commit -m "Final README update"
+git push
