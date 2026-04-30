@@ -66,6 +66,7 @@ DiffLinker_Project/
 │   ├── compute_metrics.py
 │   └── environment.yml
 └── README.md
+```
 
 📊 Dataset
 Dataset: ZINC Dataset
@@ -110,19 +111,3 @@ GitHub: https://github.com/LAKSHYAG16
 
 
 ---
-
-# 🔥 Why this version is better
-- Clean formatting (GitHub-friendly)
-- Proper code blocks
-- Balanced content (not too long, not shallow)
-- Looks **professional for recruiters**
-
----
-
-# ⚡ Final Step
-
-Run:
-```bash
-git add README.md
-git commit -m "Final README update"
-git push
